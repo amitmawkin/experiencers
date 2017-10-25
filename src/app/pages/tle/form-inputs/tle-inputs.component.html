@@ -1,90 +1,103 @@
 <div class="row">
-  <div class="col-lg-6  ">
-    <nb-card>
-      <nb-card-header>Child Details</nb-card-header>
-      <nb-card-body>
-          <div class="row full-name-inputs">
-        <div class="input-group">
-          <input type="text" placeholder="ChildName" class="form-control"/>
-        </div>
-          <div class="input-group">
-            <input type="text" placeholder="ParentName" class="form-control"/>
-          </div>
-          <div class="input-group">
-            <input type="text" placeholder="Address1" class="form-control"/>
-          </div>
-        
-        <div class="input-group">
-          <input type="text" placeholder="Address2" class="form-control"/>
-        </div>
-        <div class="input-group">
-            <input type="text" placeholder="Phone1" class="form-control"/>
-        </div>
-        <div class="input-group">
-            <input type="text" placeholder="Phone2" class="form-control"/>
-        </div>
-        <div class="input-group">
-            <input type="text" placeholder="Referral" class="form-control"/>
-        </div>
-        <div class="input-group">
-            <input type="text" placeholder="Duration" class="form-control"/>
-        </div>
-        
+    <form (ngSubmit)="onSubmit()" #tleForm="ngForm">
+        <div class="col-md-6">
+            <nb-card>
+                <nb-card-header>Child Details</nb-card-header>
+                <nb-card-body>
+                    <div class="row full-name-inputs">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="childname" required [(ngModel)]="childname" name="childname" placeholder="Child Name" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Parent Name" class="form-control" id="parentname" required [(ngModel)]="parentname" name="parentname" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Address 1" class="form-control" id="address1" required [(ngModel)]="address1" name="address1" />
+                        </div>
 
-        <div class="input-group mail-btn-group">
-            <span class="input-group-btn">
-              <button class="btn btn-primary btn-icon">
-                <i class="ion-ios-email-outline"></i>
-              </button>
+                        <div class="input-group">
+                            <input type="text" placeholder="Address 2" class="form-control" id="address2" [(ngModel)]="address2" name="address2" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Phone 1" class="form-control" id="phone1" required minlength="10" maxlength="10" [(ngModel)]="phone1" name="phone1" #name="ngModel" />
+                            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                                <div *ngIf="name.errors.required">
+                                    Phone Number is required.
+                                </div>
+                                <div *ngIf="name.errors.minlength">
+                                    Phone Number must be at least 10 digits long.
+                                </div>
+                                <div *ngIf="name.errors.maxlength">
+                                    Phone Number must be at least 10 digits long.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Phone 2" class="form-control" id="phone2" [(ngModel)]="phone2" name="phone2" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Referral" class="form-control" id="refferal" required [(ngModel)]="refferal" name="refferal" />
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Duration" class="form-control" id="duration" required [(ngModel)]="duration" name="duration" />
+                        </div>
+                        <div class="input-group mail-btn-group">
+                            <span class="input-group-btn">
+                     <button class="btn btn-primary btn-icon">
+                      <i class="ion-ios-email-outline"></i>
+                      </button>
+                       </span>
+                            <input type="text" class="form-control" placeholder="Email" id="email" required [(ngModel)]="email" name="email">
+                            <span class="input-group-btn">
+                       <button class="btn btn-primary">
+                        @example.com
+                 </button>
             </span>
-            <input type="text" class="form-control" placeholder="Email">
-            <span class="input-group-btn">
-              <button class="btn btn-primary">
-                @example.com
-              </button>
-            </span>
-          </div>
-    
-          <div class="input-group">
-              <input type="text" class="form-control" placeholder="StartDate">
-          </div>
-          
-          <div class="form-group">
-              <label>Class</label>
-              <select class="form-control">
-                <option>InfantA</option>
-                <option>InfantB</option>
-                <option>Twaddler</option>
-                <option>Toddler</option>
-                <option>PreSchoolA</option>
-                <option>PreSchoolB</option>
-              </select>
-            </div>
-      
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Start Date" id="startdate" required [(ngModel)]="startdate" name="startdate">
+                        </div>
 
-        <div class="form-group">
-            <label>Gender</label>
-            <select class="form-control">
-              <option>Female</option>
-              <option>Male</option>
-            </select>
-          </div>
-
-
-          <div class="form-group">
-              <label>#OfDays</label>
-              <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-
-      </nb-card-body>
-    </nb-card>
-  </div>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+        <div class="col-md-6">
+            <nb-card>
+                <nb-card-header>Child Class</nb-card-header>
+                <nb-card-body>
+                    <div class="form-group">
+                        <label>Class</label>
+                        <select class="form-control" id="tleclass" required [(ngModel)]="tleclass" name="tleclass">
+                            <option>infant</option>
+                            <option>Twaddler</option>
+                            <option>Toddler</option>
+                            <option>PreSchoolA</option>
+                            <option>PreSchoolB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select class="form-control" id="gender" required [(ngModel)]="gender" name="gender">
+                        <option>Female</option>
+                        <option>Male</option>
+                       </select>
+                    </div>
+                    <div class="form-group">
+                        <label>#OfDays</label>
+                        <select class="form-control" id="numofdays" required [(ngModel)]="numofdays" name="numofdays">
+                         <option>2</option>
+                         <option>3</option>
+                         <option>5</option>
+                       </select>
+                    </div>
+                    <button type="submit" class="btn btn-success" [disabled]="!tleForm.form.valid">Submit</button>
+                    <button type="button" class="btn btn-default" (click)="tleForm.reset()">Reset</button>
+                </nb-card-body>
+            </nb-card>
+        </div>
+        <div *ngIf="show">
+            Rate is {{getRate()}}
+        </div>
+    </form>
 </div>
-    
