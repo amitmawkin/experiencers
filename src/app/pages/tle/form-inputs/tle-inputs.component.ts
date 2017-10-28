@@ -8,39 +8,29 @@ import { Tle } from './tle';
   templateUrl: './tle-inputs.component.html',
 })
 export class TleInputsComponent {
-    @Input() childname: string;
-    @Input() parentname: string;
-    @Input() address1: string;
-    @Input() address2: string;
-    @Input() phone1: number;
+    @Input() childname: string ='Jane Dow';
+    @Input() parentname: string = 'Mummy Doe';
+    @Input() address1: string = '4508 Bragdon Way, Glen Allen Va, 23059';
+    @Input() address2: string = 'dskjksd';
+    @Input() phone1: number =3095310993;
     @Input() phone2: number;
-    @Input() refferal: string;
-    @Input() duration: string;
-    @Input() email: string;
-    @Input() startdate: string;
-    @Input() tleclass: string;
-    @Input() gender: string;
-    @Input() numofdays: string;
+    @Input() refferal: string = "yes";
+    @Input() duration: string = "1 year";
+    @Input() email: string = "amit.mawkin@gmail.com";
+    @Input() startdate: string ="11/1/2017";
+    @Input() tleclass: string = "infant";
+    @Input() gender: string = "Female";
+    @Input() numofdays: string = "5";
+    @Input() dateofbirth: string = "01/01/2017";
+    @Input() starttime: string = "0630";
+    @Input() endtime: string = "1830";
     submitted = false;
     rate: string = "0";
     show: boolean = false;;
 
   onSubmit() {
      this.submitted = true;  
-     console.log(this.childname);
-     console.log(this.parentname);
-     console.log(this.address1);
-     console.log(this.address2);
-     console.log(this.phone1);
-     console.log(this.phone2);
-     console.log(this.refferal);
-     console.log(this.duration);
-     console.log(this.email);
-     console.log(this.startdate);
-     console.log(this.tleclass);
-     console.log(this.gender);
-     console.log(this.numofdays);
-     let myHero =  new Tle("","","",1234567890,"",this.numofdays,this.tleclass,"",12345567788);
+     let myHero =  new Tle("","","",1234567890,"",this.numofdays,this.tleclass,"","","","",12345567788);
      console.log("Rate is"+ myHero.rate());
      this.rate = myHero.rate();
      this.show = true;
@@ -52,4 +42,17 @@ export class TleInputsComponent {
       return this.rate;
     }
 
-}
+    printTleForm(divName)
+    {
+        var printContents = document.getElementById(divName).innerHTML;
+        var popupWin = window.open('', 'new div', 'width=300,height=300');
+        popupWin.document.write('<html><head><link rel="stylesheet" media="all" type="text/css" href="css/tle-inputs.component.scss"/></head><body>' + printContents + '</body></html>');
+        popupWin.document.close();
+        popupWin.document.focus();
+        setTimeout(function(){
+          popupWin.print();
+        },5000);
+        popupWin.close();
+       
+      } 
+    }

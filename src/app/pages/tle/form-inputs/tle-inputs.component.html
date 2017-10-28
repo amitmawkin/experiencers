@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row" *ngIf="!show">
     <form (ngSubmit)="onSubmit()" #tleForm="ngForm">
-        <div class="col-md-6">
+        <div class="col-md-6 funky-show-hide">
             <nb-card>
                 <nb-card-header>Child Details</nb-card-header>
                 <nb-card-body>
@@ -19,7 +19,7 @@
                             <input type="text" placeholder="Address 2" class="form-control" id="address2" [(ngModel)]="address2" name="address2" />
                         </div>
                         <div class="input-group">
-                            <input type="text" placeholder="Phone 1" class="form-control" id="phone1" required minlength="10" maxlength="10" [(ngModel)]="phone1" name="phone1" #name="ngModel" />
+                            <input type="text" placeholder="Phone 1 xxx-xxx-xxxxx" class="form-control" id="phone1" required minlength="10" maxlength="10" [(ngModel)]="phone1" name="phone1" #name="ngModel" />
                             <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
                                 <div *ngIf="name.errors.required">
                                     Phone Number is required.
@@ -47,7 +47,7 @@
                       <i class="ion-ios-email-outline"></i>
                       </button>
                        </span>
-                            <input type="text" class="form-control" placeholder="Email" id="email" required [(ngModel)]="email" name="email">
+                            <input type="email" class="form-control" placeholder="Email" id="email" required [(ngModel)]="email" name="email">
                             <span class="input-group-btn">
                        <button class="btn btn-primary">
                         @example.com
@@ -55,8 +55,18 @@
             </span>
                         </div>
                         <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Date Of Birth" id="dateofbirth" required [(ngModel)]="dateofbirth" name="dateofbirth">
+                        </div>
+                        <div class="input-group">
                             <input type="text" class="form-control" placeholder="Start Date" id="startdate" required [(ngModel)]="startdate" name="startdate">
                         </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Start Time" id="starttime" required [(ngModel)]="starttime" name="starttime">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="End Time" id="endtime" required [(ngModel)]="endtime" name="endtime">
+                        </div>
+
 
                     </div>
                 </nb-card-body>
@@ -96,8 +106,339 @@
                 </nb-card-body>
             </nb-card>
         </div>
-        <div *ngIf="show">
-            Rate is {{getRate()}}
-        </div>
     </form>
 </div>
+<div *ngIf="show">
+    <div class="row" id="amit" ng-show="show">
+        <div class="col-md-12">
+            <nb-card>
+                <nb-card-header>Rate Details</nb-card-header>
+                <nb-card-body>
+                    <div class="paragraphs">
+                        <div class="row">
+                            <img style="float:left" src="assets/images/tle.png" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <div class="span4">
+                                <div class="content-heading">
+                                    <br/>
+                                    <br/>
+                                    <h3>TLE at Humble / Fall Creek </h3>
+                                </div>
+                                <p style="clear:both">7743 North Sam Houston Parkway East Humble, TX 77396 | 281 441 6005</p>
+                                <p style="clear:both">humble@tlechildcare.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="colors">
+                        <div class="item text-heading">
+                            <div class="color bg-heading"></div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h6 class="text-heading">Child Name </h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{childname}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="text-heading">Parent Name</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{parentname}}
+                                        </div>
+                                    </h5>
+
+                                    <h6 class="text-heading">Address1</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{address1}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="text-heading">Address2</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{address2}}
+                                        </div>
+                                    </h5>
+                                </div>
+                                <div class="col-md-3">
+
+                                    <h6 class="text-heading">Date Of Birth</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{dateofbirth}}
+                                        </div>
+                                    </h5>
+
+                                    <h6 class="text-heading">Gender</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{gender}}
+                                        </div>
+                                    </h5>
+
+
+                                    <h6 class="text-heading">Phone1</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{phone1}}
+                                        </div>
+                                    </h5>
+
+                                    <h6 class="text-heading">Email</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{email}}
+                                        </div>
+                                    </h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-heading">StartDate</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{startdate}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="text-heading">Refferal</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{refferal}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="text-heading">Duration</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{duration}}
+                                        </div>
+                                    </h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-heading">TLE Class</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{tleclass}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="text-heading">Number Of Days </h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{numofdays}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="text-heading">Start Time</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{starttime}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="text-heading">End Time</h6>
+                                    <h5>
+                                        <div class="item text-info">
+                                            <div class="color bg-info"></div>
+                                            {{endtime}}
+                                        </div>
+                                    </h5>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="item text-danger">
+                                        <div class="color bg-danger"></div>
+                                        <p class="text-danger">
+                                            We offer the Next Generation in T.L.E. Curriculum, L.E.A.P. Interactive™! This program is designed to enhance our regular monthly proprietary curriculum where our preschoolers get to interact with touch technology daily via an interactive whiteboard within
+                                            their classroom. This new technology-driven curriculum brings the monthly theme to life utilizing such applications as Google Earth®, videos and real life pictures and sounds.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <p>
+                                        Parents' Obligations: While obligated for an entire month of tuition (see below), parents may elect at the time of signing the Schedule of Fees to pay their child’s tuition using one of three convenient payment plans outlined below: Once signed, parents
+                                        must adhere to the agreed upon payment schedule for a minimum of six (6) months, and may only change to a different payment schedule once per calendar year.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    All tuition Fees are non-refundable and include <br/>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Enrichment programs (vary by location). These may include: Marvelous Math®, Movin N Groovin®, Music 4 Me®, Dancing Feet®, Yippee-for-Yoga®, Talent Sprouts®, Suddenly Science®, and Super Soccer™.</li>
+                                        <li class="list-group-item">A well-balanced and nutritional lunch, two snacks, and beverages will be provided for all full time children on table food.</li>
+                                        <li class="list-group-item">School will be closed on the following days however, tuition is still due for these holidays:
+                                            <ul class="list-group">
+                                                <li class="list-group-item disabled">New Year's Eve, New Year’s Day, Presidents Day, Memorial Day, Fourth of July, Labor Day, Columbus Day, day before Thanksgiving, Thanksgiving Day, Day following Thanksgiving, Christmas Eve, Christmas Day</li>
+                                                <li class="list-group-item disabled">If a nationally recognized Holiday falls on the weekend, it will be observed the preceding Friday or the following Monday.</li>
+                                                <li class="list-group-item disabled">All School closings follow Humble ISD School Schedule</li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <font color='violet'> Sibling Discount 10% - Older Child for 5 day FT only. Only one twin eligible.</font>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <font color='violet'> Notice period of 4 weeks for Dis-enrollment</font>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="row">
+                                        <div class="demo-checkboxes col-sm-4">
+
+                                            <h4>Base Tution ${{getRate()}}</h4>
+
+                                            <nb-checkbox>Breakfast</nb-checkbox>
+                                            <nb-checkbox>Credit Card</nb-checkbox>
+                                            <nb-checkbox>Auto Pay</nb-checkbox>
+                                        </div>
+
+                                        <div class="demo-radio col-sm-4">
+                                            <h4>Discount $0.0</h4>
+                                            <label class="custom-control custom-radio">
+                                              <input type="radio" class="custom-control-input" name="customRadio">
+                                              <span class="custom-control-indicator"></span>
+                                              <span class="custom-control-description">Work & Family </span>
+                                            </label>
+                                            <label class="custom-control custom-radio">
+                                              <input type="radio" class="custom-control-input" name="customRadio" checked>
+                                              <span class="custom-control-indicator"></span>
+                                              <span class="custom-control-description">Sibling / Teacher / Military</span>
+                                            </label>
+                                            <label class="custom-control custom-radio">
+                                              <input type="radio" class="custom-control-input" name="customRadio">
+                                              <span class="custom-control-indicator"></span>
+                                              <span class="custom-control-description">None</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                        <b> Monthly Payments:</b> A late fee of
+                                        <font color='violet'><b>$40</b></font> will automatically be charged to any account not paid in full by close of business on the 3rd of each month.
+                                    </p>
+                                    <p>
+                                        <b>Weekly Payments:</b> A late fee of
+                                        <font color='violet'><b>$20</b></font>per week will automatically be charged if tuition is not paid by close of business each Tuesday evening.
+                                    </p>
+                                    <p>
+                                        <b>Auto Pay:</b> When you enroll in Auto Pay of the tuition through an ACH bank debit an additional discount of $25.00 per month for full time students only. The auto pay is run on the 1st of each month or the Monday
+                                        of each week.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <br/>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        Each child will receive one-week (five consecutive days) of vacation credit per calendar year. In order to receive this credit you must be in attendance for a minimum of six (6) months consecutively. Tuition is waived for that period if a Notification
+                                        of Vacation form is completed at least 14 days in advance.
+                                    </p>
+                                    <p> <b>There is an annual Summer Program Activity Fee of $150.00 payable on April 1st for children 2 years of age and up.</b></p>
+
+                                    <p> <b>Annual Registration Fee of $125.00 is due on August 1st for each new school year.</b> Parents will complete new Registration Packet, update all contact and health information, every registration period for the school
+                                        year.
+                                    </p>
+                                    <p>
+                                        <font color='violet'>Every child must have 2 changes of labeled clean clothes. Parents to supply all grooming materials (labeled) including creams and ointments.</font>
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                        <b>EFT Notice:</b> When you provide a check as a payment, you authorize us to either use the information from your check to make a one-time electronic fund transfer from your account or to process your payment as
+                                        a check transaction. If you elect to pay tuition as a check transaction, there will be a
+                                        <font color='violet'><b>$35.00</b></font> service fee for all returned checks. After 2 checks are returned, tuition payment must automatically be set up as an Auto Pay.
+                                    </p>
+                                    <p>
+                                        <b>Credit Card Payments:</b> Credit card payments are only accepted if you enroll in Auto Pay either monthly or weekly. All credit card payments will be charged convenience fees of
+                                        <font color='violet'><b>$25.00</b></font> monthly.
+                                    </p>
+                                    <p>
+                                        <b>Extra Care:</b>
+                                        <font color='violet'><b>$15.00</b></font> for every 15 minutes or a portion thereof after 6:30 pm; CASH payment due at pickup.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <font color='violet'>To the extent any of the polices or procedures set forth herein differ from the policies set forth in TLE’s Parent Handbook or Enrollment Packet, the policies set forth on this rate sheet shall govern.</font>
+                                    </p>
+                                    <p>
+                                        For this reason The Learning Experience will require all parents to obligate themselves to their entire tuition on a monthly basis (special arrangements may be made for the summer months). Should you decide to keep your child home for any reason, you
+                                        will be required to pay your tuition in full for that period of absence as part of your contractual monthly arrangements with us. Your child cannot re-enter the center without this payment in full. Should administration
+                                        make any verbal arrangements to accept your child after this temporary absence, you will still be obligated for the monthly tuition balance outstanding with such balance being due within a reasonable period of time
+                                        after your child's acceptance back to school.
+                                    </p>
+                                    <p>
+                                        <font color='violet'><b>  ATTORNEY’S FEES AND COST FOR COLLECTIONS: </b></font>Parent herein agrees that in the event The Learning Experience is forced to take any action to collect any amount of unpaid tuition, then, and in that event,
+                                        the parent will be responsible and hereby agrees to reimburse The Learning Experience for any and all attorney’s fees, filing fees, and/or cost associated with any collection efforts made by The Learning Experience
+                                        either individually or through its legal counsel, against the parent.
+                                    </p>
+                                    <p>
+                                        I, the parent/guardian of have read the above tuition responsibility agreement which shall become part of my obligation to the center and I fully understand this obligation and the reasons for its implementation.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+
+                                    <p><br/></p>
+                                    <p><br/></p>
+                                    <font color='violet'><b>Parent Signature </b></font>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <p><br/></p>
+                                    <p><br/></p>
+                                    <font color='violet'><b>Date </b></font>
+
+                                </div>
+                                <div class="col-md-4">
+
+                                    <p><br/></p>
+                                    <p><br/></p>
+                                    <font color='violet'><b>Witness</b></font>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="btn-with-icon-example">
+                                    <button type="button" class="btn btn-primary btn-with-icon" (click)="printTleForm('amit')">
+                                              <i class="nb-star"></i>
+                                              <span>Print</span>
+                                            </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+
+        </div>
+    </div>

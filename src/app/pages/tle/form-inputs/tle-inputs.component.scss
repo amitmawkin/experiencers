@@ -6,6 +6,28 @@
     nb-card-body {
         overflow: visible;
     }
+    .list-group {
+        list-style: decimal inside;
+    }
+    .list-group-item {
+        display: list-item;
+    }
+    .funky-show-hide.ng-hide-add {
+        transform: rotateZ(0);
+        transform-origin: right;
+        transition: all 0.5s ease-in-out;
+    }
+    .funky-show-hide.ng-hide-add.ng-hide-add-active {
+        transform: rotateZ(-135deg);
+    }
+    .funky-show-hide.ng-hide-remove {
+        transform: rotateY(90deg);
+        transform-origin: left;
+        transition: all 0.5s ease;
+    }
+    .funky-show-hide.ng-hide-remove.ng-hide-remove-active {
+        transform: rotateY(0);
+    }
     .input-group {
         margin-bottom: 1rem;
     }
