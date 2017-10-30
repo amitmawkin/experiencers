@@ -1,7 +1,6 @@
 @import '../../../@theme/styles/themes';
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/bootstrap/breakpoints';
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @include nb-install-component() {
     nb-card-body {
         overflow: visible;
