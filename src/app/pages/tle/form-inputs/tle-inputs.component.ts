@@ -25,34 +25,83 @@ export class TleInputsComponent {
     @Input() starttime: string = "0630";
     @Input() endtime: string = "1830";
     submitted = false;
-    rate: string = "0";
-    show: boolean = false;;
+    baserate: string = "0";
+    netrate: string = "0";
+    show: boolean = false;
+    discountRate: boolean = false;
+    discount: string = "0";
 
   onSubmit() {
      this.submitted = true;  
      let myHero =  new Tle("","","",1234567890,"",this.numofdays,this.tleclass,"","","","",12345567788);
-     console.log("Rate is"+ myHero.rate());
-     this.rate = myHero.rate();
+     this.baserate = myHero.rate();
      this.show = true;
     }
 
-    getRate(){
+    getBaseRate(){
       this.show = true;
       console.log("show is:"+this.show);
-      return this.rate;
+      return this.baserate;
+    }
+
+    getDiscount(){
+      return this.discount;
+    }
+
+    getNetRate() {
+      return this.netrate;
+    }
+
+    getWeekly()
+    {
+      let x = parseInt(this.netrate) / 4;
+      return x;
+    }
+
+    getBiWeekly()
+    {
+      let x = parseInt(this.netrate) / 2;
+      return x;
+    }
+
+    addRate(amount)
+    {
+      let x = parseInt(amount) + parseInt(this.baserate);
+      this.netrate=x+"";
+    }
+    subtractRate(amount)
+    {
+      let x = parseInt(this.netrate) - parseInt(amount) ;
+      this.netrate=x+"";
+    }
+
+    addDiscount()
+    {
+      let x = + (parseInt(this.baserate)) - (parseInt(this.baserate) * 0.1 )
+      this.netrate=x+"";
+      this.discountRate=true;
+      this.discount = (parseInt(this.baserate) * 0.10 )+"";
+    }
+    removeDiscount()
+    {
+      let x = parseInt(this.netrate) + (parseInt(this.baserate) * 0.10 );
+      this.netrate=x+"";
+      this.discountRate=false;
+      this.discount = "0";
     }
 
     printTleForm(divName)
     {
         var printContents = document.getElementById(divName).innerHTML;
-        var popupWin = window.open('', 'new div', 'width=300,height=300');
-        popupWin.document.write('<html><head><link rel="stylesheet" media="all" type="text/css" href="css/tle-inputs.component.scss"/></head><body>' + printContents + '</body></html>');
+        var popupWin = window.open('', '', 'width=500,height=500');
+        popupWin.document.open();
+        popupWin.document.write('<html><head><link rel="stylesheet" media="all" type="text/css" href="assets/css/tle-inputs.component.scss"/></head><body>' + printContents + '</body></html>');
         popupWin.document.close();
-        popupWin.document.focus();
         setTimeout(function(){
+          popupWin.focus;
           popupWin.print();
-        },5000);
-        popupWin.close();
+        },2000);
+        //popupWin.close();
        
       } 
     }

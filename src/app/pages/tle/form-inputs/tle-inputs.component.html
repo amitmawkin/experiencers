@@ -302,32 +302,45 @@
                                     <div class="row">
                                         <div class="demo-checkboxes col-sm-4">
 
-                                            <h4>Base Tution ${{getRate()}}</h4>
-
-                                            <nb-checkbox>Breakfast</nb-checkbox>
-                                            <nb-checkbox>Credit Card</nb-checkbox>
-                                            <nb-checkbox>Auto Pay</nb-checkbox>
+                                            <h4>Base Tution ${{getBaseRate()}}</h4>
+                                            <nb-checkbox (change)="$event.target.checked? addRate(30):subtractRate(30)">Breakfast</nb-checkbox>
+                                            <nb-checkbox (change)="$event.target.checked? addRate(25):subtractRate(25)">Credit Card</nb-checkbox>
+                                            <nb-checkbox (change)="$event.target.checked? addRate(-25):subtractRate(-25)">Auto Pay</nb-checkbox>
                                         </div>
 
                                         <div class="demo-radio col-sm-4">
-                                            <h4>Discount $0.0</h4>
+                                            <h4>Discount ${{getDiscount()}}</h4>
                                             <label class="custom-control custom-radio">
-                                              <input type="radio" class="custom-control-input" name="customRadio">
+                                              <input type="radio" class="custom-control-input" name="customRadio" (change)="$event.target.checked? addDiscount():removeDiscount()" [disabled]="discountRate">
                                               <span class="custom-control-indicator"></span>
                                               <span class="custom-control-description">Work & Family </span>
                                             </label>
                                             <label class="custom-control custom-radio">
-                                              <input type="radio" class="custom-control-input" name="customRadio" checked>
+                                              <input type="radio" class="custom-control-input" name="customRadio" (change)="$event.target.checked? addDiscount():removeDiscount()" [disabled]="discountRate">
                                               <span class="custom-control-indicator"></span>
                                               <span class="custom-control-description">Sibling / Teacher / Military</span>
                                             </label>
                                             <label class="custom-control custom-radio">
-                                              <input type="radio" class="custom-control-input" name="customRadio">
+                                              <input type="radio" class="custom-control-input" name="customRadio" (change)="removeDiscount()" checked>
                                               <span class="custom-control-indicator"></span>
                                               <span class="custom-control-description">None</span>
                                             </label>
                                         </div>
                                     </div>
+
+                                    <div class="row">
+                                        <h4>Net Tution ${{getNetRate()}}</h4>
+                                    </div>
+                                    <div class="row">
+                                        <h5>Monthly ${{getNetRate()}}</h5>
+                                    </div>
+                                    <div class="row">
+                                        <h4>Weekly ${{getWeekly()}}</h4>
+                                    </div>
+                                    <div class="row">
+                                        <h4>Bi-Weekly ${{getBiWeekly()}}</h4>
+                                    </div>
+
 
                                     <p>
                                         <b> Monthly Payments:</b> A late fee of
@@ -335,7 +348,7 @@
                                     </p>
                                     <p>
                                         <b>Weekly Payments:</b> A late fee of
-                                        <font color='violet'><b>$20</b></font>per week will automatically be charged if tuition is not paid by close of business each Tuesday evening.
+                                        <font color='violet'><b>$20</b></font> per week will automatically be charged if tuition is not paid by close of business each Tuesday evening.
                                     </p>
                                     <p>
                                         <b>Auto Pay:</b> When you enroll in Auto Pay of the tuition through an ACH bank debit an additional discount of $25.00 per month for full time students only. The auto pay is run on the 1st of each month or the Monday
@@ -346,8 +359,8 @@
                             </div>
                             <br/>
 
-                            <div class="row">
-                                <div class="col-md-6">
+                            <div class="row ">
+                                <div class="col-md-6 ">
                                     <p>
                                         Each child will receive one-week (five consecutive days) of vacation credit per calendar year. In order to receive this credit you must be in attendance for a minimum of six (6) months consecutively. Tuition is waived for that period if a Notification
                                         of Vacation form is completed at least 14 days in advance.
@@ -361,7 +374,7 @@
                                         <font color='violet'>Every child must have 2 changes of labeled clean clothes. Parents to supply all grooming materials (labeled) including creams and ointments.</font>
                                     </p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 ">
                                     <p>
                                         <b>EFT Notice:</b> When you provide a check as a payment, you authorize us to either use the information from your check to make a one-time electronic fund transfer from your account or to process your payment as
                                         a check transaction. If you elect to pay tuition as a check transaction, there will be a
@@ -378,8 +391,8 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12">
+                            <div class="row ">
+                                <div class="col-md-12 ">
                                     <p>
                                         <font color='violet'>To the extent any of the polices or procedures set forth herein differ from the policies set forth in TLE’s Parent Handbook or Enrollment Packet, the policies set forth on this rate sheet shall govern.</font>
                                     </p>
@@ -400,8 +413,8 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-4">
+                            <div class="row ">
+                                <div class="col-md-4 ">
 
                                     <p><br/></p>
                                     <p><br/></p>
@@ -409,14 +422,14 @@
 
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 ">
 
                                     <p><br/></p>
                                     <p><br/></p>
                                     <font color='violet'><b>Date </b></font>
 
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 ">
 
                                     <p><br/></p>
                                     <p><br/></p>
@@ -425,10 +438,10 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="btn-with-icon-example">
-                                    <button type="button" class="btn btn-primary btn-with-icon" (click)="printTleForm('amit')">
-                                              <i class="nb-star"></i>
+                            <div class="row ">
+                                <div class="btn-with-icon-example ">
+                                    <button type="button " class="btn btn-primary btn-with-icon " (click)="printTleForm( 'amit') ">
+                                              <i class="nb-star "></i>
                                               <span>Print</span>
                                             </button>
                                 </div>
