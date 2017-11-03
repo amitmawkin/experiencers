@@ -1,5 +1,7 @@
 import { Input,Component } from '@angular/core';
 import { Tle } from './tle';
+import * as html2canvas from "html2canvas"
+
 
 
 @Component({
@@ -95,7 +97,7 @@ export class TleInputsComponent {
         var printContents = document.getElementById(divName).innerHTML;
         var popupWin = window.open('', '', 'width=500,height=500');
         popupWin.document.open();
-        popupWin.document.write('<html><head><link rel="stylesheet" media="all" type="text/css" href="assets/css/tle-inputs.component.scss"/></head><body>' + printContents + '</body></html>');
+        popupWin.document.write('<html><head><link rel="stylesheet" media="all" type="text/css" href="assets/css/tle-inputs.component.scss"/>><body>' + printContents + '</body></html>');
         popupWin.document.close();
         setTimeout(function(){
           popupWin.focus;
@@ -104,4 +106,19 @@ export class TleInputsComponent {
         //popupWin.close();
        
       } 
+
+      pdfDownload(divName) {
+        html2canvas(document.getElementById(divName)).then(function(canvas) {
+          // Export the canvas to its data URI representation
+          var base64image = canvas.toDataURL("image/png");    
+          var iframe = "<iframe width='100%' height='100%' src='" + base64image + "'></iframe>"
+          var x = window.open();
+          x.document.open();
+          x.document.write(iframe);
+          x.document.close();
+      });
+
+      
+
     }
+  }

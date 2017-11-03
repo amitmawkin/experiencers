@@ -443,15 +443,18 @@
                             </div>
 
                             <div class="row ">
-                                <div class="btn-with-icon-example ">
-                                    <button type="button " class="btn btn-primary btn-with-icon " (click)="printTleForm( 'amit') ">
-                                              <i class="nb-star "></i>
+                                <div class="col-md-4 ">
+                                    <div class="btn-with-icon-example ">
+                                        <button type="button" class="btn btn-primary btn-with-icon" (click)="printTleForm('amit')">
+                                              <i class="nb-star"></i>
                                               <span>Print</span>
                                             </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-primary btn-with-icon" (click)="pdfDownload('amit')">save</button>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </nb-card-body>
