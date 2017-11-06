@@ -38,6 +38,7 @@ export class TleInputsComponent {
      let myHero =  new Tle("","","",1234567890,"",this.numofdays,this.tleclass,"","","","",12345567788);
      this.baserate = myHero.rate();
      this.show = true;
+     this.netrate = this.baserate;
     }
 
     getBaseRate(){
@@ -68,7 +69,7 @@ export class TleInputsComponent {
 
     addRate(amount)
     {
-      let x = parseInt(amount) + parseInt(this.baserate);
+      let x = parseInt(amount) + parseInt(this.netrate);
       this.netrate=x+"";
     }
     subtractRate(amount)
@@ -79,15 +80,15 @@ export class TleInputsComponent {
 
     addDiscount()
     {
-      let x = + (parseInt(this.baserate)) - (parseInt(this.baserate) * 0.1 )
-      this.netrate=x+"";
+      let x = parseInt(this.netrate) * 0.1 ;
+      this.netrate= parseInt(this.netrate) - x+"";
       this.discountRate=true;
-      this.discount = (parseInt(this.baserate) * 0.10 )+"";
+      this.discount = x+"";
     }
     removeDiscount()
     {
-      let x = parseInt(this.netrate) + (parseInt(this.baserate) * 0.10 );
-      this.netrate=x+"";
+     
+      this.netrate=parseInt(this.netrate)+parseInt(this.discount)+"";
       this.discountRate=false;
       this.discount = "0";
     }

@@ -112,6 +112,7 @@ var TleInputsComponent = (function () {
         var myHero = new __WEBPACK_IMPORTED_MODULE_1__tle__["a" /* Tle */]("", "", "", 1234567890, "", this.numofdays, this.tleclass, "", "", "", "", 12345567788);
         this.baserate = myHero.rate();
         this.show = true;
+        this.netrate = this.baserate;
     };
     TleInputsComponent.prototype.getBaseRate = function () {
         this.show = true;
@@ -133,7 +134,7 @@ var TleInputsComponent = (function () {
         return x;
     };
     TleInputsComponent.prototype.addRate = function (amount) {
-        var x = parseInt(amount) + parseInt(this.baserate);
+        var x = parseInt(amount) + parseInt(this.netrate);
         this.netrate = x + "";
     };
     TleInputsComponent.prototype.subtractRate = function (amount) {
@@ -141,14 +142,13 @@ var TleInputsComponent = (function () {
         this.netrate = x + "";
     };
     TleInputsComponent.prototype.addDiscount = function () {
-        var x = +(parseInt(this.baserate)) - (parseInt(this.baserate) * 0.1);
-        this.netrate = x + "";
+        var x = parseInt(this.netrate) * 0.1;
+        this.netrate = parseInt(this.netrate) - x + "";
         this.discountRate = true;
-        this.discount = (parseInt(this.baserate) * 0.10) + "";
+        this.discount = x + "";
     };
     TleInputsComponent.prototype.removeDiscount = function () {
-        var x = parseInt(this.netrate) + (parseInt(this.baserate) * 0.10);
-        this.netrate = x + "";
+        this.netrate = parseInt(this.netrate) + parseInt(this.discount) + "";
         this.discountRate = false;
         this.discount = "0";
     };
