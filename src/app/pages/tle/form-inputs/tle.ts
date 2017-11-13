@@ -1,3 +1,5 @@
+import * as data from '../../../../assets/data/rates.json';
+
 export class Tle {
     constructor(
     public childName: string,
@@ -21,14 +23,17 @@ export class Tle {
     
         if(this.tleclass=='infant'  && this.duration=='5')
         {
-            return '1100'
+            const rate = (<any>data).humble.infant.five;
+            return rate;
         }
         else if(this.tleclass=='infant' && this.duration=='3')
         {
+            const rate = (<any>data).humble.infant.three
             return 'not allowed'
         }
         else if(this.tleclass=='infant' && this.duration=='2')
         {
+            const rate = (<any>data).humble.infant.two;
             return 'not allowed'
         }
         else

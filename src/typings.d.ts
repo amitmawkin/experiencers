@@ -13,3 +13,12 @@ interface NodeModule {
 declare var tinymce: any;
 
 declare var echarts: any;
+
+
+/* below code added to load rates.json file */
+
+declare module "*.json" {
+  const value: any;
+  export default value;
+}
+

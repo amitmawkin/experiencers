@@ -80,7 +80,7 @@ export class TleInputsComponent {
 
     addDiscount()
     {
-      let x = parseInt(this.netrate) * 0.1 ;
+      let x = Math.round(parseInt(this.netrate) * 0.1);
       this.netrate= parseInt(this.netrate) - x+"";
       this.discountRate=true;
       this.discount = x+"";
@@ -88,7 +88,7 @@ export class TleInputsComponent {
     removeDiscount()
     {
      
-      this.netrate=parseInt(this.netrate)+parseInt(this.discount)+"";
+      this.netrate=Math.round(parseInt(this.netrate)+parseInt(this.discount))+"";
       this.discountRate=false;
       this.discount = "0";
     }
