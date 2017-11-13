@@ -10,6 +10,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Humble',
         link: '/pages/tle/inputs',
       },
+      {
+        title: 'Sierra',
+        link: '/pages/tle/sierrainputs'
+      }
     ],
   },
     ];
