@@ -1,0 +1,57 @@
+{
+    "humble":{
+      "infant" : {
+          "five" : "1120",
+          "three" : "not allowed",
+          "two" : "not allowed"
+      },
+      "toddler":{
+          "five" : "1000",
+          "three" : "750",
+          "two" : "600" 
+      },
+      "twaddler":{
+          "five" : "960",
+          "3" : "720",
+          "2" : "576"
+      },
+      "preppers":{
+          "five" : "960",
+          "three" : "720",
+          "two" : "576"
+      },
+      "preschool":{
+          "five": "900",
+          "three": "675",
+          "two": "540"
+      }
+  },
+  
+  "sierra":{
+      "infant" : {
+          "five" : "1120",
+          "three" : "not allowed",
+          "two" : "not allowed"
+      },
+      "toddler":{
+          "five" : "1000",
+          "three" : "750",
+          "two" : "600" 
+      },
+      "twaddler":{
+          "five" : "960",
+          "three" : "720",
+          "two" : "576"
+      },
+      "preppers":{
+          "five" : "960",
+          "three" : "720",
+          "two" : "576"
+      },
+      "preschool":{
+          "five": "900",
+          "three": "675",
+          "two": "540"
+      }
+  }
+  }

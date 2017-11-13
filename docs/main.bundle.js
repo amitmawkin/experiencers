@@ -4,53 +4,20 @@ webpackJsonp(["main"],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./charts/charts.module": [
-		"../../../../../src/app/pages/charts/charts.module.ts",
-		"charts.module",
-		"common"
-	],
-	"./components/components.module": [
-		"../../../../../src/app/pages/components/components.module.ts",
-		"components.module",
-		"common"
-	],
-	"./editors/editors.module": [
-		"../../../../../src/app/pages/editors/editors.module.ts",
-		"editors.module"
-	],
-	"./forms/forms.module": [
-		"../../../../../src/app/pages/forms/forms.module.ts",
-		"forms.module"
-	],
-	"./maps/maps.module": [
-		"../../../../../src/app/pages/maps/maps.module.ts",
-		"maps.module",
-		"common"
-	],
-	"./tables/tables.module": [
-		"../../../../../src/app/pages/tables/tables.module.ts",
-		"tables.module",
-		"common"
-	],
 	"./tle/Tle.module": [
 		"../../../../../src/app/pages/tle/Tle.module.ts",
 		"Tle.module"
 	],
-	"./ui-features/ui-features.module": [
-		"../../../../../src/app/pages/ui-features/ui-features.module.ts",
-		"ui-features.module"
-	],
 	"app/pages/pages.module": [
 		"../../../../../src/app/pages/pages.module.ts",
-		"pages.module",
-		"common"
+		"pages.module"
 	]
 };
 function webpackAsyncContext(req) {
 	var ids = map[req];
 	if(!ids)
 		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
+	return __webpack_require__.e(ids[1]).then(function() {
 		return __webpack_require__(ids[0]);
 	});
 };
@@ -119,16 +86,16 @@ var CoreModule = CoreModule_1 = (function () {
     return CoreModule;
 }());
 CoreModule = CoreModule_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__nebular_auth__["b" /* NbAuthModule */],
         ],
         declarations: [],
     }),
-    __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"])()), __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["SkipSelf"])()),
+    __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Optional */])()), __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* SkipSelf */])()),
     __metadata("design:paramtypes", [CoreModule])
 ], CoreModule);
 
@@ -181,9 +148,9 @@ var DataModule = DataModule_1 = (function () {
     return DataModule;
 }());
 DataModule = DataModule_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
         ],
         providers: SERVICES.slice(),
     })
@@ -274,7 +241,7 @@ var ElectricityService = (function () {
     return ElectricityService;
 }());
 ElectricityService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
     __metadata("design:paramtypes", [])
 ], ElectricityService);
 
@@ -359,7 +326,7 @@ var PlayerService = (function () {
     return PlayerService;
 }());
 PlayerService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
 ], PlayerService);
 
 //# sourceMappingURL=player.service.js.map
@@ -809,7 +776,7 @@ var SmartTableService = (function () {
     return SmartTableService;
 }());
 SmartTableService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
 ], SmartTableService);
 
 //# sourceMappingURL=smart-table.service.js.map
@@ -895,7 +862,7 @@ var StateService = (function () {
     return StateService;
 }());
 StateService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
 ], StateService);
 
 //# sourceMappingURL=state.service.js.map
@@ -950,7 +917,7 @@ var UserService = (function () {
     return UserService;
 }());
 UserService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
     __metadata("design:paramtypes", [])
 ], UserService);
 
@@ -1018,8 +985,8 @@ var AnalyticsService = (function () {
     return AnalyticsService;
 }());
 AnalyticsService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["Location"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object])
 ], AnalyticsService);
 
 var _a, _b;
@@ -1064,7 +1031,7 @@ var FooterComponent = (function () {
     return FooterComponent;
 }());
 FooterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-footer',
         styles: [__webpack_require__("../../../../../src/app/@theme/components/footer/footer.component.scss")],
         template: "\n    <span class=\"created-by\">Created with \u2665 by <b><a href=\"https://akveo.com\" target=\"_blank\">Akveo</a></b> 2017</span>\n    <div class=\"socials\">\n      <a href=\"https://github.com/akveo\" target=\"_blank\" class=\"ion ion-social-github\"></a>\n      <a href=\"https://www.facebook.com/akveo\" target=\"_blank\" class=\"ion ion-social-facebook\"></a>\n      <a href=\"https://twitter.com/akveo_inc\" target=\"_blank\" class=\"ion ion-social-twitter\"></a>\n      <a href=\"https://www.linkedin.com/company/akveo\" target=\"_blank\" class=\"ion ion-social-linkedin\"></a>\n    </div>\n  ",
@@ -1078,7 +1045,7 @@ FooterComponent = __decorate([
 /***/ "../../../../../src/app/@theme/components/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header-container\"\n     [class.left]=\"position === 'normal'\"\n     [class.right]=\"position === 'inverse'\">\n  <div class=\"logo-containter\">\n    <a (click)=\"toggleSidebar()\" href=\"#\" class=\"navigation\"><i class=\"nb-menu\"></i></a>\n    <div class=\"logo\" (click)=\"goToHome()\">ngx-<span>admin</span></div>\n  </div>\n  <ngx-theme-switcher></ngx-theme-switcher>\n</div>\n\n<nb-actions\n  size=\"medium\"\n  class=\"header-container\"\n  [class.right]=\"position === 'normal'\"\n  [class.left]=\"position === 'inverse'\">\n  <nb-action icon=\"nb-grid-b\" class=\"toggle-layout\" (click)=\"toggleSettings()\"></nb-action>\n  <nb-action>\n    <nb-user [menu]=\"userMenu\" [name]=\"user?.name\" [picture]=\"user?.picture\"></nb-user>\n  </nb-action>\n  <nb-action class=\"control-item\" disabled icon=\"nb-notifications\"></nb-action>\n  <nb-action class=\"control-item\" icon=\"nb-email\"></nb-action>\n  <nb-action class=\"control-item\">\n    <nb-search type=\"rotate-layout\" (click)=\"startSearch()\"></nb-search>\n  </nb-action>\n</nb-actions>\n"
+module.exports = "<div class=\"header-container\"\n     [class.left]=\"position === 'normal'\"\n     [class.right]=\"position === 'inverse'\">\n  <div class=\"logo-containter\">\n    <a (click)=\"toggleSidebar()\" href=\"#\" class=\"navigation\"><i class=\"nb-menu\"></i></a>\n    <div class=\"logo\" (click)=\"goToHome()\">Vele-<span>Partners LLC</span></div>\n  </div>\n</div>\n\n<nb-actions\n  size=\"medium\"\n  class=\"header-container\"\n  [class.right]=\"position === 'normal'\"\n  [class.left]=\"position === 'inverse'\">\n  <nb-action icon=\"nb-grid-b\" class=\"toggle-layout\" (click)=\"toggleSettings()\"></nb-action>\n  <nb-action>\n    <nb-user [menu]=\"userMenu\" [name]=\"user?.name\" [picture]=\"user?.picture\"></nb-user>\n  </nb-action>\n  <nb-action class=\"control-item\" disabled icon=\"nb-notifications\"></nb-action>\n  <nb-action class=\"control-item\" icon=\"nb-email\"></nb-action>\n  <nb-action class=\"control-item\">\n    <nb-search type=\"rotate-layout\" (click)=\"startSearch()\"></nb-search>\n  </nb-action>\n</nb-actions>\n"
 
 /***/ }),
 
@@ -1153,16 +1120,16 @@ var HeaderComponent = (function () {
     return HeaderComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
     __metadata("design:type", String)
 ], HeaderComponent.prototype, "position", void 0);
 HeaderComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-header',
         styles: [__webpack_require__("../../../../../src/app/@theme/components/header/header.component.scss")],
         template: __webpack_require__("../../../../../src/app/@theme/components/header/header.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["l" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["l" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["h" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["h" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["k" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["k" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["g" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["g" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
 ], HeaderComponent);
 
 var _a, _b, _c, _d;
@@ -1232,7 +1199,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SearchInputComponent = (function () {
     function SearchInputComponent() {
-        this.search = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.search = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.isInputShown = false;
     }
     SearchInputComponent.prototype.showInput = function () {
@@ -1248,15 +1215,15 @@ var SearchInputComponent = (function () {
     return SearchInputComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('input'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('input'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object)
 ], SearchInputComponent.prototype, "input", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _b || Object)
 ], SearchInputComponent.prototype, "search", void 0);
 SearchInputComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-search-input',
         styles: [__webpack_require__("../../../../../src/app/@theme/components/search-input/search-input.component.scss")],
         template: "\n    <i class=\"control-icon ion ion-ios-search\"\n       (click)=\"showInput()\"></i>\n    <input placeholder=\"Type your search request here...\"\n           #input\n           [class.hidden]=\"!isInputShown\"\n           (blur)=\"hideInput()\"\n           (input)=\"onInput($event)\">\n  ",
@@ -1336,7 +1303,7 @@ var ThemeSettingsComponent = (function () {
     return ThemeSettingsComponent;
 }());
 ThemeSettingsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-theme-settings',
         styles: [__webpack_require__("../../../../../src/app/@theme/components/theme-settings/theme-settings.component.scss")],
         template: "\n    <h6>LAYOUTS</h6>\n    <div class=\"settings-row\">\n      <a *ngFor=\"let layout of layouts\"\n         href=\"#\"\n         [class.selected]=\"layout.selected\"\n         [attr.title]=\"layout.name\"\n         (click)=\"layoutSelect(layout)\">\n        <i [attr.class]=\"layout.icon\"></i>\n      </a>\n    </div>\n    <h6>SIDEBAR</h6>\n    <div class=\"settings-row\">\n      <a *ngFor=\"let sidebar of sidebars\"\n         href=\"#\"\n         [class.selected]=\"sidebar.selected\"\n         [attr.title]=\"sidebar.name\"\n         (click)=\"sidebarSelect(sidebar)\">\n        <i [attr.class]=\"sidebar.icon\"></i>\n      </a>\n    </div>\n  ",
@@ -1414,12 +1381,12 @@ var ThemeSwitcherComponent = (function () {
     return ThemeSwitcherComponent;
 }());
 ThemeSwitcherComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-theme-switcher',
         styles: [__webpack_require__("../../../../../src/app/@theme/components/theme-switcher/theme-switcher.component.scss")],
         template: "\n    <label class=\"theme-switch\">\n      <span class=\"light\">Light</span>\n      <div class=\"switch\">\n        <input type=\"checkbox\" [checked]=\"currentBoolTheme()\" (change)=\"toggleTheme(theme.checked)\" #theme>\n        <span class=\"slider\"></span>\n      </div>\n      <span class=\"cosmic\">Cosmic</span>\n    </label>\n  ",
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbThemeService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbThemeService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _b || Object])
 ], ThemeSwitcherComponent);
 
 var _a, _b;
@@ -1446,7 +1413,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TinyMCEComponent = (function () {
     function TinyMCEComponent(host) {
         this.host = host;
-        this.editorKeyup = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.editorKeyup = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
     }
     TinyMCEComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
@@ -1469,15 +1436,15 @@ var TinyMCEComponent = (function () {
     return TinyMCEComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
     __metadata("design:type", Object)
 ], TinyMCEComponent.prototype, "editorKeyup", void 0);
 TinyMCEComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-tiny-mce',
         template: '',
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object])
 ], TinyMCEComponent);
 
 var _a;
@@ -1543,7 +1510,7 @@ var OneColumnLayoutComponent = (function () {
     return OneColumnLayoutComponent;
 }());
 OneColumnLayoutComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-one-column-layout',
         styles: [__webpack_require__("../../../../../src/app/@theme/layouts/one-column/one-column.layout.scss")],
         template: "\n    <nb-layout>\n      <nb-layout-header fixed>\n        <ngx-header></ngx-header>\n      </nb-layout-header>\n\n      <nb-sidebar class=\"menu-sidebar\" tag=\"menu-sidebar\" responsive>\n        <nb-sidebar-header>\n          <a href=\"https://github.com/akveo/nebular\" target=\"_blank\" class=\"btn btn-hero-success main-btn\">\n            <i class=\"ion ion-social-github\"></i> <span>Support Us</span>\n          </a>\n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column>\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer></ngx-footer>\n      </nb-layout-footer>\n    </nb-layout>\n  ",
@@ -1675,12 +1642,12 @@ var SampleLayoutComponent = (function () {
     return SampleLayoutComponent;
 }());
 SampleLayoutComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-sample-layout',
         styles: [__webpack_require__("../../../../../src/app/@theme/layouts/sample/sample.layout.scss")],
         template: "\n    <nb-layout [center]=\"layout.id === 'center-column'\" windowMode>\n      <nb-layout-header fixed>\n        <ngx-header [position]=\"sidebar.id === 'left' ? 'normal': 'inverse'\"></ngx-header>\n      </nb-layout-header>\n\n      <nb-sidebar class=\"menu-sidebar\"\n                   tag=\"menu-sidebar\"\n                   responsive\n                   [right]=\"sidebar.id === 'right'\">\n        <nb-sidebar-header>\n          <a href=\"https://github.com/akveo/nebular\" target=\"_blank\" class=\"btn btn-hero-success main-btn\">\n            <i class=\"ion ion-social-github\"></i> <span>Support Us</span>\n          </a>\n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column class=\"main-content\">\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-column left class=\"small\" *ngIf=\"layout.id === 'two-column' || layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-column right class=\"small\" *ngIf=\"layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer></ngx-footer>\n      </nb-layout-footer>\n\n      <nb-sidebar class=\"settings-sidebar\"\n                   tag=\"settings-sidebar\"\n                   state=\"collapsed\"\n                   fixed\n                   [right]=\"sidebar.id !== 'right'\">\n        <ngx-theme-settings></ngx-theme-settings>\n      </nb-sidebar>\n    </nb-layout>\n  ",
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["h" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["h" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbThemeService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["f" /* NbMediaBreakpointsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["f" /* NbMediaBreakpointsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["l" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["l" /* NbSidebarService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["g" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["g" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbThemeService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["e" /* NbMediaBreakpointsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["e" /* NbMediaBreakpointsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["k" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["k" /* NbSidebarService */]) === "function" && _e || Object])
 ], SampleLayoutComponent);
 
 var _a, _b, _c, _d, _e;
@@ -1726,7 +1693,7 @@ var ThreeColumnsLayoutComponent = (function () {
     return ThreeColumnsLayoutComponent;
 }());
 ThreeColumnsLayoutComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-three-columns-layout',
         styles: [__webpack_require__("../../../../../src/app/@theme/layouts/three-columns/three-columns.layout.scss")],
         template: "\n    <nb-layout>\n      <nb-layout-header fixed>\n        <ngx-header></ngx-header>\n      </nb-layout-header>\n\n      <nb-sidebar class=\"menu-sidebar\" tag=\"menu-sidebar\" responsive >\n        <nb-sidebar-header>\n          <a href=\"https://github.com/akveo/nebular\" target=\"_blank\" class=\"btn btn-hero-success main-btn\">\n            <i class=\"ion ion-social-github\"></i> <span>Support Us</span>\n          </a>\n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column class=\"small\">\n      </nb-layout-column>\n\n      <nb-layout-column right>\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-column class=\"small\">\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer></ngx-footer>\n      </nb-layout-footer>\n    </nb-layout>\n  ",
@@ -1775,7 +1742,7 @@ var TwoColumnsLayoutComponent = (function () {
     return TwoColumnsLayoutComponent;
 }());
 TwoColumnsLayoutComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-two-columns-layout',
         styles: [__webpack_require__("../../../../../src/app/@theme/layouts/two-columns/two-columns.layout.scss")],
         template: "\n    <nb-layout>\n      <nb-layout-header fixed>\n        <ngx-header></ngx-header>\n      </nb-layout-header>\n\n      <nb-sidebar class=\"menu-sidebar\" tag=\"menu-sidebar\" responsive >\n        <nb-sidebar-header>\n          <a href=\"https://github.com/akveo/nebular\" target=\"_blank\" class=\"btn btn-hero-success main-btn\">\n            <i class=\"ion ion-social-github\"></i> <span>Support Us</span>\n          </a>\n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column class=\"small\">\n      </nb-layout-column>\n\n      <nb-layout-column right>\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer></ngx-footer>\n      </nb-layout-footer>\n\n    </nb-layout>\n  ",
@@ -1810,7 +1777,7 @@ var CapitalizePipe = (function () {
     return CapitalizePipe;
 }());
 CapitalizePipe = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'ngxCapitalize' })
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Pipe */])({ name: 'ngxCapitalize' })
 ], CapitalizePipe);
 
 //# sourceMappingURL=capitalize.pipe.js.map
@@ -1865,7 +1832,7 @@ var PluralPipe = (function () {
     return PluralPipe;
 }());
 PluralPipe = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'ngxPlural' })
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Pipe */])({ name: 'ngxPlural' })
 ], PluralPipe);
 
 //# sourceMappingURL=plural.pipe.js.map
@@ -1894,7 +1861,7 @@ var RoundPipe = (function () {
     return RoundPipe;
 }());
 RoundPipe = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'ngxRound' })
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Pipe */])({ name: 'ngxRound' })
 ], RoundPipe);
 
 //# sourceMappingURL=round.pipe.js.map
@@ -1931,7 +1898,7 @@ var TimingPipe = (function () {
     return TimingPipe;
 }());
 TimingPipe = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'timing' })
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Pipe */])({ name: 'timing' })
 ], TimingPipe);
 
 //# sourceMappingURL=timing.pipe.js.map
@@ -2140,19 +2107,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var BASE_MODULES = [__WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormsModule"], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"]];
+var BASE_MODULES = [__WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* ReactiveFormsModule */]];
 var NB_MODULES = [
     __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["b" /* NbCardModule */],
-    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["e" /* NbLayoutModule */],
-    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["m" /* NbTabsetModule */],
-    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["i" /* NbRouteTabsetModule */],
-    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["g" /* NbMenuModule */],
-    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["p" /* NbUserModule */],
+    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["d" /* NbLayoutModule */],
+    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["l" /* NbTabsetModule */],
+    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["h" /* NbRouteTabsetModule */],
+    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["f" /* NbMenuModule */],
+    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["o" /* NbUserModule */],
     __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["a" /* NbActionsModule */],
-    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["j" /* NbSearchModule */],
-    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["k" /* NbSidebarModule */],
+    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["i" /* NbSearchModule */],
+    __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["j" /* NbSidebarModule */],
     __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["c" /* NbCheckboxModule */],
-    __WEBPACK_IMPORTED_MODULE_3__ng_bootstrap_ng_bootstrap__["c" /* NgbModule */],
+    __WEBPACK_IMPORTED_MODULE_3__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */],
 ];
 var COMPONENTS = [
     __WEBPACK_IMPORTED_MODULE_5__components__["e" /* ThemeSwitcherComponent */],
@@ -2172,9 +2139,9 @@ var PIPES = [
     __WEBPACK_IMPORTED_MODULE_6__pipes__["c" /* RoundPipe */],
     __WEBPACK_IMPORTED_MODULE_6__pipes__["d" /* TimingPipe */],
 ];
-var NB_THEME_PROVIDERS = __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["n" /* NbThemeModule */].forRoot({
+var NB_THEME_PROVIDERS = __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["m" /* NbThemeModule */].forRoot({
     name: 'default',
-}, [__WEBPACK_IMPORTED_MODULE_8__styles_theme_default__["a" /* DEFAULT_THEME */], __WEBPACK_IMPORTED_MODULE_9__styles_theme_cosmic__["a" /* COSMIC_THEME */]]).providers.concat(__WEBPACK_IMPORTED_MODULE_4__nebular_theme__["k" /* NbSidebarModule */].forRoot().providers, __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["g" /* NbMenuModule */].forRoot().providers);
+}, [__WEBPACK_IMPORTED_MODULE_8__styles_theme_default__["a" /* DEFAULT_THEME */], __WEBPACK_IMPORTED_MODULE_9__styles_theme_cosmic__["a" /* COSMIC_THEME */]]).providers.concat(__WEBPACK_IMPORTED_MODULE_4__nebular_theme__["j" /* NbSidebarModule */].forRoot().providers, __WEBPACK_IMPORTED_MODULE_4__nebular_theme__["f" /* NbMenuModule */].forRoot().providers);
 var ThemeModule = ThemeModule_1 = (function () {
     function ThemeModule() {
     }
@@ -2187,7 +2154,7 @@ var ThemeModule = ThemeModule_1 = (function () {
     return ThemeModule;
 }());
 ThemeModule = ThemeModule_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: BASE_MODULES.concat(NB_MODULES),
         exports: BASE_MODULES.concat(NB_MODULES, COMPONENTS, PIPES),
         declarations: COMPONENTS.concat(PIPES),
@@ -2260,7 +2227,7 @@ var AppRoutingModule = (function () {
     return AppRoutingModule;
 }());
 AppRoutingModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
         imports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["d" /* RouterModule */].forRoot(routes, config)],
         exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["d" /* RouterModule */]],
     })
@@ -2303,7 +2270,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'ngx-app',
         template: '<router-outlet></router-outlet>',
     }),
@@ -2330,7 +2297,6 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__theme_theme_module__ = __webpack_require__("../../../../../src/app/@theme/theme.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2352,28 +2318,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var AppModule = (function () {
     function AppModule() {
     }
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
+    Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["M" /* NgModule */])({
         declarations: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["BrowserModule"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_10__angular_material__["a" /* MatDatepickerModule */],
-            __WEBPACK_IMPORTED_MODULE_9__ng_bootstrap_ng_bootstrap__["c" /* NgbModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_9__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_8__theme_theme_module__["a" /* ThemeModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_5__core_core_module__["a" /* CoreModule */].forRoot(),
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]],
         providers: [
-            { provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["APP_BASE_HREF"], useValue: '/' },
+            { provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["a" /* APP_BASE_HREF */], useValue: '/' },
         ],
     })
 ], AppModule);
@@ -2426,7 +2390,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
