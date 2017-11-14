@@ -1,6 +1,6 @@
 import * as data from '../../../../assets/data/rates.json';
 
-export class Sierra {
+export class Sierra  {
     constructor(
     public childName: string,
     public parentName: string,
@@ -23,17 +23,17 @@ export class Sierra {
     
         if(this.tleclass=='infant'  && this.duration=='5')
         {
-            const rate = (<any>data).humble.infant.five;
+            const rate = (<any>data).sierra.infant.five;
             return rate;
         }
         else if(this.tleclass=='infant' && this.duration=='3')
         {
-            const rate = (<any>data).humble.infant.three
+            const rate = (<any>data).sierra.infant.three
             return 'not allowed'
         }
         else if(this.tleclass=='infant' && this.duration=='2')
         {
-            const rate = (<any>data).humble.infant.two;
+            const rate = (<any>data).sierra.infant.two;
             return 'not allowed'
         }
         else

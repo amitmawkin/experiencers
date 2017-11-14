@@ -24,12 +24,16 @@
           "five": "900",
           "three": "675",
           "two": "540"
+      },
+      "discount": {
+          "infant": "10",
+          "toddler": "10"
       }
   },
   
   "sierra":{
       "infant" : {
-          "five" : "1120",
+          "five" : "1000",
           "three" : "not allowed",
           "two" : "not allowed"
       },
@@ -52,6 +56,10 @@
           "five": "900",
           "three": "675",
           "two": "540"
-      }
+      },
+      "discount": {
+        "infant": "10",
+        "toddler": "10"
+    }
   }
   }

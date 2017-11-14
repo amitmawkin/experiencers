@@ -37,61 +37,6 @@ TleModule = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/tle/form-layouts/tle-layouts.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <nb-card class=\"inline-form-card\">\n      <nb-card-header>Inline form</nb-card-header>\n      <nb-card-body>\n        <form class=\"form-inline\">\n          <input type=\"text\" class=\"form-control full-width\" placeholder=\"Jane Doe\">\n          <div class=\"input-group full-width\">\n            <div class=\"input-group-addon\">@</div>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Email\">\n          </div>\n          <nb-checkbox>Remember me</nb-checkbox>\n          <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n        </form>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-6\">\n    <nb-card>\n      <nb-card-header>Using the Grid</nb-card-header>\n      <nb-card-body>\n        <form>\n          <div class=\"form-group row\">\n            <label for=\"inputEmail1\" class=\"col-sm-3 col-form-label\">Email</label>\n            <div class=\"col-sm-9\">\n              <input type=\"email\" class=\"form-control\" id=\"inputEmail1\" placeholder=\"Email\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <label for=\"inputPassword2\" class=\"col-sm-3 col-form-label\">Password</label>\n            <div class=\"col-sm-9\">\n              <input type=\"password\" class=\"form-control\" id=\"inputPassword2\" placeholder=\"Password\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <label class=\"col-sm-3\">Radios</label>\n            <div class=\"col-sm-9\">\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input type=\"radio\" class=\"custom-control-input\" name=\"gridRadios\" checked>\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">Option one is this and that&mdash;be sure to include why it's great</span>\n                </label>\n              </div>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input type=\"radio\" class=\"custom-control-input\" name=\"gridRadios\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">Option two can be something else and selecting it will deselect option one</span>\n                </label>\n              </div>\n              <div class=\"form-check disabled\">\n                <label class=\"custom-control custom-radio\">\n                  <input type=\"radio\" class=\"custom-control-input\" name=\"gridRadios\" disabled>\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">Option three is disabled</span>\n                </label>\n              </div>\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <div class=\"offset-sm-3 col-sm-9\">\n              <button type=\"submit\" class=\"btn btn-primary\">Sign in</button>\n            </div>\n          </div>\n        </form>\n      </nb-card-body>\n    </nb-card>\n\n    <nb-card>\n      <nb-card-header>Form without labels</nb-card-header>\n      <nb-card-body>\n        <form>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"Recipients\">\n          </div>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" placeholder=\"Subject\">\n          </div>\n          <div class=\"form-group\">\n            <textarea class=\"form-control\" placeholder=\"Message\"></textarea>\n          </div>\n          <button type=\"submit\" class=\"btn btn-success\">Send</button>\n        </form>\n      </nb-card-body>\n    </nb-card>\n  </div>\n\n  <div class=\"col-md-6\">\n    <nb-card>\n      <nb-card-header>Basic form</nb-card-header>\n      <nb-card-body>\n        <form>\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\">Email address</label>\n            <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Email\">\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\">Password</label>\n            <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n          </div>\n          <div class=\"form-group\">\n            <nb-checkbox>Check me out</nb-checkbox>\n          </div>\n          <button type=\"submit\" class=\"btn btn-danger\">Submit</button>\n        </form>\n      </nb-card-body>\n    </nb-card>\n\n    <nb-card>\n      <nb-card-header>Block form</nb-card-header>\n      <nb-card-body>\n        <div class=\"row\">\n          <div class=\"col-sm-6\">\n            <div class=\"form-group\">\n              <label for=\"inputFirstName\">First Name</label>\n              <input type=\"text\" class=\"form-control\" id=\"inputFirstName\" placeholder=\"First Name\">\n            </div>\n          </div>\n          <div class=\"col-sm-6\">\n            <div class=\"form-group\">\n              <label for=\"inputLastName\">Last Name</label>\n              <input type=\"text\" class=\"form-control\" id=\"inputLastName\" placeholder=\"Last Name\">\n            </div>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-sm-6\">\n            <div class=\"form-group\">\n              <label for=\"inputEmail\">Email</label>\n              <input type=\"email\" class=\"form-control\" id=\"inputEmail\" placeholder=\"Email\">\n            </div>\n          </div>\n          <div class=\"col-sm-6\">\n            <div class=\"form-group\">\n              <label for=\"inputWebsite\">Website</label>\n              <input type=\"text\" class=\"form-control\" id=\"inputWebsite\" placeholder=\"Website\">\n            </div>\n          </div>\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-6\">\n    <nb-card>\n      <nb-card-header>Horizontal form</nb-card-header>\n      <nb-card-body>\n        <form class=\"form-horizontal\">\n          <div class=\"form-group row\">\n            <label for=\"inputEmail3\" class=\"col-sm-3 form-control-label\">Email</label>\n            <div class=\"col-sm-9\">\n              <input type=\"email\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Email\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <label for=\"inputPassword3\" class=\"col-sm-3 form-control-label\">Password</label>\n            <div class=\"col-sm-9\">\n              <input type=\"password\" class=\"form-control\" id=\"inputPassword3\" placeholder=\"Password\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <div class=\"offset-sm-3 col-sm-9\">\n              <div class=\"checkbox\">\n                <nb-checkbox>Remember me</nb-checkbox>\n              </div>\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <div class=\"offset-sm-3 col-sm-9\">\n              <button type=\"submit\" class=\"btn btn-warning\">Sign in</button>\n            </div>\n          </div>\n        </form>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tle/form-layouts/tle-layouts.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".full-width {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  min-width: 220px; }\n\nnb-checkbox {\n  margin-bottom: 1rem; }\n\n.form-inline > * {\n  margin: 0 1.5rem 1.5rem 0; }\n\nnb-card.inline-form-card nb-card-body {\n  padding-bottom: 0; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tle/form-layouts/tle-layouts.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TleLayoutsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var TleLayoutsComponent = (function () {
-    function TleLayoutsComponent() {
-    }
-    return TleLayoutsComponent;
-}());
-TleLayoutsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'ngx-form-layouts',
-        styles: [__webpack_require__("../../../../../src/app/pages/tle/form-layouts/tle-layouts.component.scss")],
-        template: __webpack_require__("../../../../../src/app/pages/tle/form-layouts/tle-layouts.component.html"),
-    })
-], TleLayoutsComponent);
-
-//# sourceMappingURL=tle-layouts.component.js.map
-
-/***/ }),
-
 /***/ "../../../../../src/app/pages/tle/humble/tle-inputs.component.html":
 /***/ (function(module, exports) {
 
@@ -596,15 +541,15 @@ var Sierra = (function () {
     }
     Sierra.prototype.rate = function () {
         if (this.tleclass == 'infant' && this.duration == '5') {
-            var rate = __WEBPACK_IMPORTED_MODULE_0__assets_data_rates_json__["humble"].infant.five;
+            var rate = __WEBPACK_IMPORTED_MODULE_0__assets_data_rates_json__["sierra"].infant.five;
             return rate;
         }
         else if (this.tleclass == 'infant' && this.duration == '3') {
-            var rate = __WEBPACK_IMPORTED_MODULE_0__assets_data_rates_json__["humble"].infant.three;
+            var rate = __WEBPACK_IMPORTED_MODULE_0__assets_data_rates_json__["sierra"].infant.three;
             return 'not allowed';
         }
         else if (this.tleclass == 'infant' && this.duration == '2') {
-            var rate = __WEBPACK_IMPORTED_MODULE_0__assets_data_rates_json__["humble"].infant.two;
+            var rate = __WEBPACK_IMPORTED_MODULE_0__assets_data_rates_json__["sierra"].infant.two;
             return 'not allowed';
         }
         else {
@@ -629,14 +574,12 @@ var Sierra = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tle_component__ = __webpack_require__("../../../../../src/app/pages/tle/tle.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__humble_tle_inputs_component__ = __webpack_require__("../../../../../src/app/pages/tle/humble/tle-inputs.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sierra_sierra_inputs_component__ = __webpack_require__("../../../../../src/app/pages/tle/sierra/sierra-inputs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__form_layouts_tle_layouts_component__ = __webpack_require__("../../../../../src/app/pages/tle/form-layouts/tle-layouts.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -652,11 +595,8 @@ var routes = [{
             {
                 path: 'sierrainputs',
                 component: __WEBPACK_IMPORTED_MODULE_4__sierra_sierra_inputs_component__["a" /* SierraInputsComponent */],
-            },
-            {
-                path: 'layouts',
-                component: __WEBPACK_IMPORTED_MODULE_5__form_layouts_tle_layouts_component__["a" /* TleLayoutsComponent */],
-            }],
+            }
+        ],
     }];
 var TleRoutingModule = (function () {
     function TleRoutingModule() {
@@ -677,8 +617,7 @@ TleRoutingModule = __decorate([
 var routedComponents = [
     __WEBPACK_IMPORTED_MODULE_2__tle_component__["a" /* TleComponent */],
     __WEBPACK_IMPORTED_MODULE_3__humble_tle_inputs_component__["a" /* TleInputsComponent */],
-    __WEBPACK_IMPORTED_MODULE_4__sierra_sierra_inputs_component__["a" /* SierraInputsComponent */],
-    __WEBPACK_IMPORTED_MODULE_5__form_layouts_tle_layouts_component__["a" /* TleLayoutsComponent */],
+    __WEBPACK_IMPORTED_MODULE_4__sierra_sierra_inputs_component__["a" /* SierraInputsComponent */]
 ];
 //# sourceMappingURL=tle-routing.module.js.map
 
@@ -716,7 +655,7 @@ TleComponent = __decorate([
 /***/ "../../../../../src/assets/data/rates.json":
 /***/ (function(module, exports) {
 
-module.exports = {"humble":{"infant":{"five":"1120","three":"not allowed","two":"not allowed"},"toddler":{"five":"1000","three":"750","two":"600"},"twaddler":{"2":"576","3":"720","five":"960"},"preppers":{"five":"960","three":"720","two":"576"},"preschool":{"five":"900","three":"675","two":"540"}},"sierra":{"infant":{"five":"1120","three":"not allowed","two":"not allowed"},"toddler":{"five":"1000","three":"750","two":"600"},"twaddler":{"five":"960","three":"720","two":"576"},"preppers":{"five":"960","three":"720","two":"576"},"preschool":{"five":"900","three":"675","two":"540"}}}
+module.exports = {"humble":{"infant":{"five":"1120","three":"not allowed","two":"not allowed"},"toddler":{"five":"1000","three":"750","two":"600"},"twaddler":{"2":"576","3":"720","five":"960"},"preppers":{"five":"960","three":"720","two":"576"},"preschool":{"five":"900","three":"675","two":"540"},"discount":{"infant":"10","toddler":"10"}},"sierra":{"infant":{"five":"1000","three":"not allowed","two":"not allowed"},"toddler":{"five":"1000","three":"750","two":"600"},"twaddler":{"five":"960","three":"720","two":"576"},"preppers":{"five":"960","three":"720","two":"576"},"preschool":{"five":"900","three":"675","two":"540"},"discount":{"infant":"10","toddler":"10"}}}
 
 /***/ }),
 

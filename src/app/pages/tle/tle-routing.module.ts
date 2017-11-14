@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { TleComponent } from './tle.component';
 import { TleInputsComponent } from './humble/tle-inputs.component';
 import { SierraInputsComponent } from './sierra/sierra-inputs.component';
-import { TleLayoutsComponent } from './form-layouts/tle-layouts.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,11 +15,8 @@ const routes: Routes = [{
   {
     path: 'sierrainputs',
     component: SierraInputsComponent,
-  },
-   {
-    path: 'layouts',
-    component: TleLayoutsComponent,
-  }],
+  }
+],
 }];
 
 @NgModule({
@@ -38,6 +34,5 @@ export class TleRoutingModule {
 export const routedComponents = [
   TleComponent,
   TleInputsComponent,
-  SierraInputsComponent,
-  TleLayoutsComponent,
+  SierraInputsComponent
 ];
